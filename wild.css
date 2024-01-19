@@ -1,0 +1,314 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url(Images/blur.webp);
+    background-size: cover; /* This ensures that the background image covers the entire element */
+    background-position: center center; /* This centers the background image */
+    background-repeat: no-repeat;
+  
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px; /* Adjusted padding */
+    height: 70px; /* Adjusted height */
+  }
+  
+  
+  .navbar .logo {
+      display: flex;
+      align-items: center;
+  
+    }
+    
+    .navbar .logo img {
+      max-width: 70%; /* Set the maximum width to 100% */
+      height: auto;
+    }
+    
+    
+  
+  
+  .navbar input#menu-toggler {
+    display: none;
+  }
+  
+  .navbar #hamburger-btn {
+    cursor: pointer;
+    display: none;
+  }
+  
+  .logo {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .all-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    white-space: nowrap;
+  }
+  
+  .all-links li {
+    margin: 0 15px;
+  }
+  
+  .all-links li a {
+    text-decoration: none; /* Fix for text-decoration value */
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .all-links li a:hover {
+    color: rgb(255, 124, 37);
+    border-radius: 5px;
+  }  
+    
+  
+  /* Dropdown styling */
+  .dropdown .sublinks {
+    display: none;
+    position: absolute;
+    background-color: rgb(16, 174, 69); /* Slightly lighter background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure dropdown is on top */
+  }
+  
+  .dropdown:hover .sublinks {
+    display: block;
+  }
+  
+  .sublinks li {
+    margin: 0;
+  }
+  
+  .sublinks a {
+    color: white;
+    padding: 8px 15px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sublinks a:hover {
+    color: rgb(255, 124, 37);
+  }
+
+
+.slider-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+   
+   
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.slide h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Show current slide */
+#slide1:checked ~ .slide.slide1,
+#slide2:checked ~ .slide.slide2,
+#slide3:checked ~ .slide.slide3,
+#slide4:checked ~ .slide.slide4 {
+    opacity: 1;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    cursor: pointer;
+    transition: transform 0.3s;
+    z-index: 10;
+background-color: rgb(255, 179, 0);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.nav-btn:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* ... (previous CSS remains unchanged) ... */
+
+.slide .info {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.slide .info p {
+    margin: 10px 0;
+    border: 1px solid #0b0b0b; /* Add a 1px solid border */
+    padding: 8px; 
+    
+}
+
+/* Styling for the map and images can be added here */
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* vertically center items */
+    background-image: url(Images/info.webp);
+    background-size: cover; /* This ensures that the background image covers the entire element */
+    background-position: center center; /* This centers the background image */
+    background-repeat: no-repeat; /* This ensures that the background image does not repeat */
+}
+
+
+.map-container, .image-container {
+    flex: 1; /* each container takes equal space */
+    padding: 10px; /* add some space around */
+}
+
+.map-container {
+    max-width: 60%; /* adjust as needed */
+}
+
+.image-container {
+    max-width: 40%; /* adjust as needed */
+}
+
+.image-container img {
+    max-width: 120%;
+
+    height: auto;
+    display: block; /* removes any default inline layout */
+}
+
+.wildlife-summary {
+    margin-top: -50px;
+    background-image: url(Images/info.webp);
+    background-size: cover; /* This ensures that the background image covers the entire element */
+    background-position: center center; /* This centers the background image */
+    background-repeat: no-repeat;
+}
+
+.wildlife-summary h2 {
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+
+.wildlife-summary table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wildlife-summary th, .wildlife-summary td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    background-color: #e0f8e0;
+}
+
+.wildlife-summary th {
+    background-color: #477420;
+}
+
+.wildlife-summary img {
+    max-width: 100px; /* Adjust the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any default inline layout */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.site-footer {
+    background-color: #000000;        /* Background color for the footer */
+    color: #fff;                  /* Text color */
+    padding: 20px 0;              /* Padding at the top and bottom */
+    font-size: 14px;              /* Font size */
+    text-align: center;          
+
+}
+
+.container {
+    max-width: 1100px;            /* Limit the maximum width of the content */
+    margin: 0 auto;              /* Center the content horizontally */
+    padding: 0 15px;             /* Add some padding on the sides */
+}
+
+.footer-content {
+    display: flex;               /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the items */
+    align-items: center;         /* Center the items vertically */
+}
+
+
+.footer-content p{
+    color: #ffffff;
+    margin-left: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .all-links {
+      display: none;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      background-color: #f9f9f9;
+  }
+
+  .all-links.show {
+      display: flex;
+  }
+
+  .navbar #hamburger-btn {
+      display: block;
+  }
+
+  .navbar #menu-toggler:checked + .all-links {
+      display: flex;
+  }
+}
